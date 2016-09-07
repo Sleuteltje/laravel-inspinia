@@ -54,10 +54,22 @@ return [
 
         'mysql' => [
             'driver'    => 'mysql',
-            'host'      => env('DB_HOST', 'localhost'),
-            'database'  => env('DB_DATABASE', 'forge'),
-            'username'  => env('DB_USERNAME', 'forge'),
-            'password'  => env('DB_PASSWORD', ''),
+            'host'      => 'localhost',
+            'database'  => 'composer',
+            'username'  => 'root',
+            'password'  => '1234',
+            'charset'   => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix'    => '',
+            'strict'    => false,
+        ],
+
+        'mysql2' => [
+            'driver'    => 'mysql',
+            'host'      => 'localhost',
+            'database'  => 'course',
+            'username'  => 'root',
+            'password'  => '1234',
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
@@ -116,9 +128,9 @@ return [
         'cluster' => false,
 
         'default' => [
-            'host'     => env('REDIS_HOST', 'localhost'),
-            'password' => env('REDIS_PASSWORD', null),
-            'port'     => env('REDIS_PORT', 6379),
+            'host'     => '127.0.0.1',
+            // 'password' => env('REDIS_PASSWORD', null),
+            'port'     => 6379,
             'database' => 0,
         ],
 
